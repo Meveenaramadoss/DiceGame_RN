@@ -1,20 +1,20 @@
+import { ScrollView, View } from 'react-native';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import style from './style/style';
+import Gameboard from './components/Gameboard';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={style.container}>
+      <StatusBar style='auto' backgroundColor='#d0cbcb'></StatusBar>
+      <Header />
+      <ScrollView>
+        <Gameboard />
+      </ScrollView>
+      <Footer />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
